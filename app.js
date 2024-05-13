@@ -5,7 +5,7 @@ const app = express();
 const querystring = require('querystring');
 
 const redirectURI = 'auth/google';
-const oauthredirectURI = 'http://localhost:3000/auth/google/callback';
+const oauthredirectURI = process.env.CALLBACK_URL;
 
 function getGoogleAuthURL() {
   const rootUrl = 'https://accounts.google.com/o/oauth2/v2/auth';
